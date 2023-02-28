@@ -27,6 +27,7 @@ The project uses declarative database access methods and DAO and Transfer Object
 - Java
 - Apache Tomcat
 - AJAX
+- Facelets
 - HTML
 - CSS
 
