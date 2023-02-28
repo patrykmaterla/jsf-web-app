@@ -1,0 +1,63 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Dec 16, 2022, 12:18:27 PM
+    Author     : Patryk
+*/
+
+body {
+	margin: 0px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: var(--surface-a);
+	font-family: var(--font-family);
+	font-weight: normal;
+	color: var(--text-color);
+	-webkit-font-smooting: antialiased;
+	-moz-osx-font-smooting: grayscale;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #147fbc;
+}
+
+.logout {
+	position: absolute;
+	right: 0px;
+}
+
+div.footer {
+	text-align: center;
+}
+
+div.logout_msg {
+	text-align: center;
+}
+div.logon_error {
+	text-align: center;
+}
+h3.home {
+	text-align: center;
+}

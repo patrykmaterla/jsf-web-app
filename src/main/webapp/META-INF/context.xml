@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/ProjektMaterlaPatryk">
+	<Realm 
+		localDataSource="false" className="org.apache.catalina.realm.DataSourceRealm"
+		dataSourceName="jdbc/authority"
+		userTable="users" userNameCol="user_name" userCredCol="user_pass"
+		userRoleTable="user_roles" roleNameCol="role_name"
+	/>
+</Context>

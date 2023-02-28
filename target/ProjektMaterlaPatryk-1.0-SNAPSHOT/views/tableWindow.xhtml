@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+		xmlns:f="http://xmlns.jcp.org/jsf/core"
+		xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+		xmlns:p="http://primefaces.org/ui">
+
+
+	<h:body>
+		
+		<ui:composition template="./../template/masterTemplate.xhtml">
+		<ui:define name="content">
+
+		<h:form>
+			<p:dataTable value="#{newJSFManagedBeanSession.userToList}" var="userToList" >
+				<p:column>
+					<f:facet name="header">#{msgs.id}</f:facet>
+					<h:outputText value="#{userToList.id}"/>
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+						"#{msgs.lastname}"
+						<p:commandButton id="sortDown" value='&dArr;'>
+							<f:ajax listener="#{newJSFManagedBeanSession.sort('asc')}" render="@form"/>
+						</p:commandButton>
+						<p:commandButton id="sortUp" value='&uArr;'>
+							<f:ajax listener="#{newJSFManagedBeanSession.sort('desc')}" render="@form"/>
+						</p:commandButton>
+					</f:facet>
+					<p:inputText value="#{userToList.nazwisko}" rendered="#{userToList.edited}"/>
+					<h:outputText value="#{userToList.nazwisko}" rendered="#{not userToList.edited}"/>
+				</p:column>
+				<p:column>
+					<f:facet name="header">"#{msgs.firstname}"</f:facet>
+					<p:inputText value="#{userToList.imie}" rendered="#{userToList.edited}"/>
+					<h:outputText value="#{userToList.imie}" rendered="#{not userToList.edited}"/>
+				</p:column>
+				<p:column id="kolOperacja">
+					<f:facet name="header">"#{msgs.operation}"</f:facet>
+					<p:selectBooleanCheckbox id="editCheckBox1" value="#{userToList.edited}" rendered="true">
+						<f:ajax listener="#{newJSFManagedBeanSession.visibleChange(userToList)}" execute="@form" render="@form"/>
+					</p:selectBooleanCheckbox>
+					<p:commandButton id="addRow" value="+">
+						<f:ajax listener="#{newJSFManagedBeanSession.addRow(userToList)}" execute="@form" render="@form"/>
+					</p:commandButton>
+					<p:commandButton id="deleteRow" value="-">
+						<f:ajax listener="#{newJSFManagedBeanSession.deleteRow(userToList)}" execute="@form" render="@form"/>
+					</p:commandButton>
+				</p:column>
+			</p:dataTable>
+		</h:form>
+			
+		</ui:define>
+		</ui:composition>
+
+	</h:body>
+</html>
+

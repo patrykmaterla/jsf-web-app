@@ -1,0 +1,12 @@
+dao\exceptions\NonexistentEntityException.class
+com\mycompany\projektmaterlapatryk\NewJSFManagedBeanSession.class
+filters\CacheFilter.class
+com\mycompany\projektmaterlapatryk\ApplicationControllerXML.class
+entity\TUzytkownik.class
+entity\TUzytkownik_.class
+dao\TUzytkownikJpaController.class
+com\mycompany\projektmaterlapatryk\NewJSFManagedBeanApplication.class
+to\UserTO.class
+dao\exceptions\PreexistingEntityException.class
+dao\exceptions\RollbackFailureException.class
+dao\exceptions\IllegalOrphanException.class
